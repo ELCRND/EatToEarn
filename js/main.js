@@ -1,8 +1,8 @@
 const menuBtn = document.querySelector(".header__menu-btn");
 const menu = document.querySelector(".header__menu");
-
 const homeCode = document.querySelector(".home-token__code");
 const tooltip = document.querySelector(".tooltip");
+const form = document.querySelector(".partners__form");
 
 // открыть/закрыть меню
 menuBtn.addEventListener("click", () => {
@@ -25,4 +25,13 @@ document.querySelector(".home-token__copy").addEventListener("click", () => {
   navigator.clipboard.writeText(homeCode.innerText);
   tooltip.classList.add("visible");
   setTimeout(() => tooltip.classList.remove("visible"), 600);
+});
+
+// получение данных из формы
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const formData = new FormData(form);
+  // for (let i of formData) {
+  //   console.log(i);
+  // }
 });

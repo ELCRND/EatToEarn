@@ -1,226 +1,229 @@
 .buy {
-  padding-bottom: 270px;
-  background-image: url("../public/img/buy/buy_bg.png");
-  background-size: cover;
-  background-position: 0 120px;
+  padding-top: 175px;
+  padding-bottom: 395px;
+  position: relative;
 
   @media screen and (max-width: 1279px) {
-    padding-bottom: 57px;
-  }
-  @media screen and (max-width: 768px) {
-    background-position: center;
+    padding-top: 162px;
+    padding-bottom: 124px;
   }
 }
 
 .buy__container {
-  width: min(1236px, 100%);
+  width: min(1324px, 100%);
   margin-left: auto;
   margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.buy__title {
-  margin-bottom: 45px;
-  font-family: var(--second-family);
-  font-weight: 700;
-  font-size: 94px;
-
-  @media screen and (max-width: 1279px) {
-    margin-bottom: 33px;
-    font-size: 39px;
-    text-align: center;
-  }
+  padding-left: 22px;
+  padding-right: 22px;
 }
 
 .buy__wrap {
   display: flex;
-  border-radius: 28px;
-  background-color: #fff;
+  flex-direction: column-reverse;
+  gap: 16px;
 
   @media screen and (max-width: 1279px) {
-    width: fit-content;
-    flex-direction: column;
-    margin-left: auto;
-    margin-right: auto;
+    align-items: center;
+    gap: 7px;
   }
-  @media screen and (max-width: 768px) {
-    height: 598px;
+}
+
+.buy__title {
+  margin-bottom: 134px;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 93%;
+  text-transform: uppercase;
+  color: var(--red);
+  text-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.25);
+
+  @media screen and (max-width: 1279px) {
+    margin-bottom: 85px;
+    font-size: 43px;
   }
+}
+
+.buy__subtitle {
+  font-family: var(--second-family);
+  font-weight: 600;
+  font-size: 18px;
+  color: #fff;
 }
 
 .buy__steps {
-  min-width: 647px;
-  padding: 56px 64px 46px 64px;
-  position: relative;
-  z-index: 1;
-
-  @media screen and (max-width: 1279px) {
-    min-width: auto;
-    width: 580px;
-    padding: 38px 44px 24px 44px;
-  }
-
-  @media screen and (max-width: 768px) {
-    width: 100%;
-    height: 50%;
-  }
-
-  &::before {
-    content: "";
-    width: calc(100% - 44px);
-    height: calc(100% - 44px);
-    position: absolute;
-    top: 22px;
-    left: 22px;
-    border: 2px solid #06080b;
-    border-radius: 11px;
-    z-index: -1;
-
-    @media screen and (max-width: 1279px) {
-      width: calc(100% - 52px);
-      height: calc(100% - 36px);
-      top: 18px;
-      left: 26px;
-    }
-  }
-}
-
-.buy__img {
-  padding: 22px 22px 0 0;
-  min-width: 535px;
-  min-height: 521px;
-
-  @media screen and (max-width: 1279px) {
-    padding: 0 26px 26px 26px;
-  }
-  @media screen and (max-width: 768px) {
-    min-width: auto;
-    min-height: auto;
-    img {
-      width: 306px;
-      height: 290px;
-    }
-  }
-}
-
-.steps__title {
-  margin-bottom: 46px;
-  font-family: var(--font-family);
-  font-size: 51px;
-  color: #000;
-
-  @media screen and (max-width: 1279px) {
-    margin-bottom: 23px;
-    font-size: 25px;
-  }
-}
-
-.steps__list {
-  margin-bottom: 50px;
-  margin-left: 20px;
   display: flex;
-  flex-direction: column;
-  gap: 46px;
+  justify-content: space-between;
 
   @media screen and (max-width: 1279px) {
-    margin-bottom: 25px;
-    margin-left: 12px;
-    gap: 23px;
+    flex-direction: column;
+    align-items: center;
+    gap: 67px;
   }
 }
 
-.steps__item {
+.buy-steps__title {
+  margin-bottom: 33px;
   display: flex;
   align-items: center;
-  gap: 45px;
-  font-family: var(--third-family);
+  gap: 16px;
+  font-family: var(--second-family);
   font-weight: 500;
   font-size: 31px;
-  color: #000;
+  color: #fff;
 
   @media screen and (max-width: 1279px) {
-    gap: 22px;
-    font-size: 15px;
+    margin-bottom: 20px;
+    justify-content: center;
+  }
+
+  &:before {
+    content: "";
+    width: 24px;
+    height: 24px;
+    display: block;
+    border-radius: 50%;
+    background-color: #420000;
   }
 }
 
-.steps__num {
-  position: relative;
-  font-family: var(--third-family);
+.buy-steps__descriptions {
+  max-width: 370px;
+  margin-bottom: 42px;
+  font-family: var(--second-family);
+  color: #c0c0c0;
+  font-size: 18px;
+  line-height: 180%;
+
+  @media screen and (max-width: 1279px) {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .buy__accent-color {
+    font-family: var(--second-family);
+    font-weight: 800;
+    color: #fff;
+  }
+}
+
+.buy__download {
+  width: 241px;
+  height: 55px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  font-family: var(--second-family);
   font-weight: 600;
-  font-size: 32px;
-  line-height: 137%;
+  font-size: 18px;
   text-align: center;
-  background: linear-gradient(106deg, #ffe74a 0%, #ffae2b 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #000;
+  transition: filter 200ms ease;
 
   @media screen and (max-width: 1279px) {
-    font-size: 15px;
+    display: none;
   }
 
-  &::before {
-    content: url("../public/img/buy/buy_mark.png");
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    translate: -50% -43%;
-
-    @media screen and (max-width: 1279px) {
-      scale: 0.5;
-      translate: -50% -49%;
-    }
+  &:hover {
+    filter: brightness(0.8);
   }
-}
-
-.steps__description {
-  font-family: var(--third-family);
-  font-size: 15px;
-  color: #000;
-
-  @media screen and (max-width: 768px) {
-    max-width: 270px;
-    font-size: 9px;
+  &:active {
+    filter: brightness(1);
   }
 }
 
 .buy__banner {
-  height: 154px;
-  margin-bottom: 125px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 6px;
-  background-color: #000;
+  width: min(842px, 100%);
+  height: 297px;
+  margin-top: 265px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 -1px 14px rgba(255, 255, 255, 0.25);
+  background: #000;
+  position: relative;
 
   @media screen and (max-width: 1279px) {
-    margin-bottom: 43px;
+    height: 110px;
+    margin-top: 67px;
+    padding: 16px;
   }
-  @media screen and (max-width: 768px) {
-    height: 80px;
+}
+
+.banner__top {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--second-family);
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+  color: #fff;
+
+  @media screen and (max-width: 1279px) {
+    margin-bottom: 6px;
+    font-size: 11px;
+  }
+}
+
+.banner__num {
+  width: fit-content;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 700;
+  font-size: 68px;
+  color: var(--red);
+  position: relative;
+  z-index: 1;
+
+  @media screen and (max-width: 1279px) {
+    font-size: 25px;
+  }
+}
+
+.banner__img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.buy__ticker {
+  width: 100%;
+  height: 80px;
+  background-color: var(--red);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  @media screen and (max-width: 1279px) {
+    height: 42px;
   }
 
-  span {
-    &:first-of-type {
-      font-size: 31px;
+  .ticker__wrap {
+    display: flex;
+    align-items: center;
+    gap: 124px;
+    animation: tickerMove 60s linear infinite;
 
-      @media screen and (max-width: 768px) {
-        font-size: 16px;
-      }
+    @media screen and (max-width: 1279px) {
+      gap: 64px;
     }
-    &:last-of-type {
-      font-family: var(--second-family);
-      font-size: 52px;
-      background: linear-gradient(106deg, #ffe74a 0%, #ffae2b 100%);
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
 
-      @media screen and (max-width: 768px) {
-        font-size: 28px;
+    span {
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 100%;
+      color: #fff;
+      text-wrap: nowrap;
+
+      @media screen and (max-width: 1279px) {
+        font-size: 16px;
       }
     }
   }

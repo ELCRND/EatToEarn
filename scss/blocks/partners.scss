@@ -1,0 +1,123 @@
+.partners {
+  padding-top: 110px;
+  padding-bottom: 100px;
+  background-image: url("../public/img/partners/partners_bg.jpg");
+  background-size: cover;
+  background-position: center;
+
+  @media screen and (max-width: 1279px) {
+    padding-top: 80px;
+    padding-bottom: 15px;
+  }
+}
+
+.partners__container {
+  width: min(1014px, 100%);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.partners__title {
+  max-width: 783px;
+  margin-bottom: 52px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 700;
+  font-size: 156px;
+  line-height: 93%;
+  text-align: center;
+  color: var(--red);
+
+  @media screen and (max-width: 1279px) {
+    max-width: 311px;
+    margin-bottom: 49px;
+    font-size: 62px;
+  }
+}
+
+.form__wrap {
+  margin-bottom: 52px;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+
+  @media screen and (max-width: 1279px) {
+    margin-bottom: 36px;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.form__name,
+.form__phone,
+.form__detail {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  font-family: var(--second-family);
+  font-weight: 600;
+  font-size: 18px;
+  color: #fff;
+
+  input {
+    padding: 20px 24px;
+    border-radius: 10px;
+    background: #fff;
+    font-family: var(--second-family);
+    font-weight: 600;
+    font-size: 20px;
+    color: #000;
+  }
+
+  &::placeholder {
+    font-family: var(--second-family);
+    font-weight: 600;
+    font-size: 20px;
+    color: #afafaf;
+  }
+}
+
+.form__submit {
+  border-radius: 10px;
+  padding: 15px 73px;
+  background-color: var(--red);
+  font-family: var(--second-family);
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+  color: #fff;
+  transition: filter 200ms ease;
+
+  &:hover {
+    filter: brightness(0.8);
+  }
+  &:active {
+    filter: brightness(1);
+  }
+}
+
+.form__privacy {
+  max-width: 523px;
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 15px;
+  color: #fff;
+
+  @media screen and (max-width: 1279px) {
+    max-width: 297px;
+  }
+}
+
+.submit-wrap {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+
+  @media screen and (max-width: 1279px) {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 38px;
+  }
+}
