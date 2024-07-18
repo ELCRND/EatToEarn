@@ -1,0 +1,406 @@
+.steps {
+  padding-top: 247px;
+  padding-bottom: 255px;
+  position: relative;
+
+  @media screen and (max-width: 1279px) {
+    padding-top: 123px;
+    padding-bottom: 64px;
+  }
+}
+
+.steps__container {
+  width: min(1316px, 100%);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 28px;
+  padding-right: 28px;
+}
+
+.steps__wrap {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 16px;
+}
+
+.steps__title {
+  margin-bottom: 104px;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 93%;
+  text-transform: uppercase;
+  color: #e60000;
+  text-shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
+
+  @media screen and (max-width: 1279px) {
+    margin-bottom: 71px;
+    text-align: center;
+    font-size: 43px;
+  }
+}
+
+.steps__subtitle {
+  font-family: var(--second-family);
+  font-weight: 600;
+  font-size: 18px;
+  color: #fff;
+  @media screen and (max-width: 1279px) {
+    text-align: center;
+  }
+}
+
+.step-1 {
+  margin-bottom: 315px;
+  position: relative;
+  padding-left: 83px;
+
+  @media screen and (max-width: 1279px) {
+    margin-bottom: 130px;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.step-1__title,
+.step-2__title {
+  width: 275px;
+  height: 146px;
+  margin-bottom: 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  @media screen and (max-width: 1279px) {
+    width: 160px;
+    height: 90px;
+    margin-bottom: 90px;
+  }
+
+  &::before {
+    content: url("../public/img/steps/step_1_decoration_1.png");
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &::after {
+    content: url("../public/img/steps/step_1_decoration_2.png");
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  span {
+    &:first-of-type {
+      font-family: var(--second-family);
+      font-weight: 800;
+      font-size: 68px;
+      background: linear-gradient(113deg, #fff 0%, #999 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      @media screen and (max-width: 1279px) {
+        font-size: 35px;
+      }
+    }
+
+    &:last-of-type {
+      font-weight: 600;
+      font-size: 18px;
+      color: #fff;
+
+      @media screen and (max-width: 1279px) {
+        font-size: 14px;
+      }
+      @media screen and (max-width: 768px) {
+        font-size: 9px;
+      }
+    }
+  }
+}
+
+.step-1__download {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media screen and (max-width: 1279px) {
+    display: none;
+  }
+}
+
+.download__playmarket {
+  width: 194px;
+  height: 55px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  background-color: #fff;
+  font-family: var(--second-family);
+  font-weight: 600;
+  font-size: 18px;
+  color: #000;
+  opacity: 0.25;
+  cursor: default;
+
+  &::before {
+    content: url("../public/img/steps/playmarket_icon.png");
+  }
+}
+
+.download__appstore {
+  width: 194px;
+  height: 55px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  background-color: #fff;
+  font-family: var(--second-family);
+  font-weight: 600;
+  font-size: 18px;
+  color: #000;
+  opacity: 0.25;
+  cursor: default;
+
+  &::before {
+    content: url("../public/img/steps/appstore_icon.png");
+  }
+}
+
+.step-1__img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  filter: drop-shadow(0 0 80px #4b4b4b);
+
+  @media screen and (max-width: 1279px) {
+    position: static;
+    filter: none;
+  }
+
+  img {
+    @media screen and (max-width: 1279px) {
+      display: none;
+    }
+  }
+}
+
+.step-1__btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -45% -40%;
+  width: 697px;
+  height: 112px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 -1px 14px 0 rgba(255, 0, 0, 0.25);
+  background: #000;
+  font-weight: 700;
+  font-size: 43px;
+  line-height: 93%;
+  text-transform: uppercase;
+  color: var(--red);
+  text-shadow: 0 3px 3px rgba(0, 0, 0, 0.25);
+  transition: box-shadow 200ms ease;
+
+  @media screen and (max-width: 1279px) {
+    width: 320px;
+    height: 51px;
+    font-size: 20px;
+    position: static;
+    translate: 0 0;
+
+    svg {
+      scale: 0.6;
+      translate: 0 -5%;
+    }
+  }
+
+  &:hover {
+    box-shadow: 0 -1px 24px 0 rgba(255, 0, 0, 0.7);
+  }
+  &:active {
+    box-shadow: 0 -1px 14px 0 rgba(255, 0, 0, 0.25);
+  }
+}
+
+.step-2 {
+  margin-bottom: 174px;
+  display: flex;
+  align-items: center;
+  gap: 85px;
+
+  @media screen and (max-width: 1279px) {
+    margin-bottom: 71px;
+    flex-direction: column-reverse;
+    gap: 30px;
+    align-items: center;
+  }
+}
+
+.step-2__title {
+  margin-left: auto;
+
+  @media screen and (max-width: 1279px) {
+    margin-right: auto;
+    margin-bottom: 30px;
+  }
+}
+
+.step-2__description {
+  max-width: 387px;
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 180%;
+  text-align: right;
+
+  @media screen and (max-width: 1279px) {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .step-2__accent-text {
+    font-weight: 800;
+    color: #fff;
+  }
+}
+
+.step-3 {
+  height: 624px;
+  padding-top: 49px;
+  padding-bottom: 49px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("../public/img/steps/step_3_img.png");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+  @media screen and (max-width: 1279px) {
+    height: 407px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 27px;
+    padding-right: 27px;
+  }
+  @media screen and (max-width: 680px) {
+    background-image: url("../public/img/steps/step_3_img_mobile.png");
+  }
+}
+
+.step-3__title {
+  margin-bottom: 30px;
+  font-family: var(--second-family);
+  font-weight: 800;
+  font-size: 68px;
+  background: linear-gradient(113deg, #fff 0%, #999 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  @media screen and (max-width: 1279px) {
+    margin-bottom: 8px;
+    font-size: 33px;
+  }
+}
+
+.step-3__description {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 15px;
+  text-align: center;
+  color: #fff;
+  text-align: center;
+
+  @media screen and (max-width: 768px) {
+    font-size: 13px;
+  }
+}
+
+.step-3__btn {
+  position: absolute;
+  bottom: 49px;
+  left: 50%;
+  translate: -50% 0;
+  width: 194px;
+  height: 55px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  font-family: var(--second-family);
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+  color: #000;
+  transition: filter 200ms ease;
+
+  @media screen and (max-width: 1279px) {
+    width: 194px;
+    height: 55px;
+    font-size: 18px;
+    bottom: 20px;
+  }
+
+  &:hover {
+    filter: brightness(0.8);
+  }
+  &:active {
+    filter: brightness(1);
+  }
+}
+
+.steps__ticker {
+  width: 100%;
+  height: 80px;
+  background-color: var(--red);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  @media screen and (max-width: 1279px) {
+    height: 42px;
+  }
+
+  .ticker__wrap {
+    display: flex;
+    align-items: center;
+    gap: 124px;
+    animation: tickerMove 60s linear infinite;
+
+    @media screen and (max-width: 1279px) {
+      gap: 64px;
+    }
+
+    span {
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 100%;
+      color: #fff;
+      text-wrap: nowrap;
+
+      @media screen and (max-width: 1279px) {
+        font-size: 16px;
+      }
+    }
+  }
+}

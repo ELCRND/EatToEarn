@@ -1,0 +1,175 @@
+.choose {
+  padding-top: 192px;
+  padding-bottom: 30px;
+  background-image: url("../public/img/choose/choose_bg.png");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+
+  @media screen and (max-width: 1279px) {
+    padding-top: 45px;
+    padding-bottom: 6px;
+  }
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.85);
+  }
+}
+
+.choose__container {
+  width: min(1316px, 100%);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 28px;
+  padding-right: 28px;
+}
+
+.choose__title {
+  margin-bottom: 68px;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 93%;
+  text-transform: uppercase;
+  color: var(--red);
+
+  @media screen and (max-width: 1279px) {
+    margin-bottom: 40px;
+    font-size: 43px;
+    text-align: center;
+  }
+}
+
+.choose__wrap {
+  margin-bottom: 33px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  row-gap: 53px;
+  column-gap: 30px;
+  place-items: center;
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 16px;
+  }
+}
+
+.restaurant__img {
+  width: 290px;
+  height: 285px;
+  margin-bottom: 4px;
+  overflow: hidden;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  backdrop-filter: blur(9px);
+  background: rgba(0, 0, 0, 0.5);
+
+  @media screen and (max-width: 768px) {
+    width: 150px;
+    height: 150px;
+  }
+
+  &:hover {
+    .restaurant__bg {
+      transition: scale 500ms ease;
+      scale: 1.1;
+    }
+  }
+}
+
+.restaurant__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.restaurant__logo {
+  position: relative;
+  z-index: 2;
+
+  @media screen and (max-width: 768px) {
+    width: 95px;
+    height: 49px;
+  }
+}
+
+.restaurant__name {
+  padding-left: 30px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-family: var(--second-family);
+  font-size: 18px;
+  line-height: 180%;
+  text-transform: uppercase;
+  color: #fff;
+  position: relative;
+  text-wrap: nowrap;
+
+  @media screen and (max-width: 768px) {
+    padding-left: 24px;
+    gap: 10px;
+    font-size: 12px;
+  }
+
+  &::before {
+    content: url("../public/img/choose/choose_mark.png");
+    position: absolute;
+    left: 0;
+    translate: 4px 6px;
+    @media screen and (max-width: 768px) {
+      scale: 0.7;
+      translate: 2px 2px;
+    }
+  }
+}
+
+.restaurant__description {
+  padding-left: 2px;
+  font-family: var(--second-family);
+  font-size: 16px;
+  line-height: 180%;
+  color: #fff;
+
+  @media screen and (max-width: 768px) {
+    font-size: 11px;
+  }
+}
+
+.choose__btn {
+  width: fit-content;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  color: #e10000;
+  transition: filter 200ms ease;
+
+  &:hover {
+    filter: brightness(1.4);
+  }
+  &:active {
+    filter: brightness(1);
+  }
+}
+
+.choose__restaurant {
+  &:nth-of-type(1n + 7) {
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+}
