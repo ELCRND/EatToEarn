@@ -93,7 +93,12 @@
   left: 0;
 }
 
-.restaurant__logo {
+.restaurant__title {
+  font-family: var(--third-family);
+  font-weight: 400;
+  font-size: 37px;
+  line-height: 88%;
+  color: #fff;
   position: relative;
   z-index: 2;
 
@@ -131,18 +136,6 @@
       scale: 0.7;
       translate: 2px 2px;
     }
-  }
-}
-
-.restaurant__description {
-  padding-left: 2px;
-  font-family: var(--second-family);
-  font-size: 16px;
-  line-height: 180%;
-  color: #fff;
-
-  @media screen and (max-width: 768px) {
-    font-size: 11px;
   }
 }
 

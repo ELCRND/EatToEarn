@@ -1,5 +1,6 @@
 /* Reset and base styles  */
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mansalva&display=swap");
 * {
   padding: 0px;
   margin: 0px;
@@ -131,7 +132,7 @@ legend {
 :root {
   --font-family: "Gropled", sans-serif;
   --second-family: "Manrope", sans-serif;
-  --third-family: "Montserrat", sans-serif;
+  --third-family: "Mansalva", sans-serif;
   --red: #e60000;
 }
 
@@ -657,11 +658,6 @@ body {
   }
 }
 
-.about__accent-text {
-  font-weight: 800;
-  color: #fff;
-}
-
 .about__statistics {
   width: fit-content;
   margin-bottom: 86px;
@@ -895,12 +891,17 @@ body {
   left: 0;
 }
 
-.restaurant__logo {
+.restaurant__title {
+  font-family: var(--third-family);
+  font-weight: 400;
+  font-size: 37px;
+  line-height: 88%;
+  color: #fff;
   position: relative;
   z-index: 2;
 }
 @media screen and (max-width: 768px) {
-  .restaurant__logo {
+  .restaurant__title {
     width: 95px;
     height: 49px;
   }
@@ -936,19 +937,6 @@ body {
   .restaurant__name::before {
     scale: 0.7;
     translate: 2px 2px;
-  }
-}
-
-.restaurant__description {
-  padding-left: 2px;
-  font-family: var(--second-family);
-  font-size: 16px;
-  line-height: 180%;
-  color: #fff;
-}
-@media screen and (max-width: 768px) {
-  .restaurant__description {
-    font-size: 11px;
   }
 }
 
@@ -1266,10 +1254,6 @@ body {
     text-align: center;
   }
 }
-.step-2__description .step-2__accent-text {
-  font-weight: 800;
-  color: #fff;
-}
 
 .step-3 {
   height: 624px;
@@ -1300,7 +1284,6 @@ body {
 }
 
 .step-3__title {
-  margin-bottom: 30px;
   font-family: var(--second-family);
   font-weight: 800;
   font-size: 68px;
@@ -1311,12 +1294,12 @@ body {
 }
 @media screen and (max-width: 1279px) {
   .step-3__title {
-    margin-bottom: 8px;
     font-size: 33px;
   }
 }
 
 .step-3__description {
+  max-width: 523px;
   font-family: var(--second-family);
   font-weight: 400;
   font-size: 15px;
@@ -1327,6 +1310,9 @@ body {
 @media screen and (max-width: 768px) {
   .step-3__description {
     font-size: 13px;
+  }
+  .step-3__description span {
+    display: none;
   }
 }
 
@@ -1656,11 +1642,6 @@ body {
     font-size: 15px;
     text-align: center;
   }
-}
-.buy-steps__descriptions .buy__accent-color {
-  font-family: var(--second-family);
-  font-weight: 800;
-  color: #fff;
 }
 
 .buy__download {
